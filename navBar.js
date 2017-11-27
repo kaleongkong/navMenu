@@ -7,9 +7,20 @@ window.onload = function(){
       navItem.addEventListener('mouseleave', function(e){
         resetFont(e.target)
       });
+      navItem.addEventListener('mousedown', function(e){
+        handleClick(e.target);
+        console.log(e.target);
+      });
+      navItem.addEventListener('mouseup', function(e){
+        handleHover(e.target)
+      });
     });
   });
 };
+
+function handleClick(target) {
+  target.style.textShadow = "2px 2px grey";
+}
 
 function handleHover(target) {
   resetFont(target);
