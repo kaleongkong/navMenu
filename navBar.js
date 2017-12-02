@@ -1,4 +1,4 @@
-window.onload = function(){
+function mainNavBarLogic() {
   Array.from(document.getElementsByClassName('navBarContainer')).forEach(function(navBarContainer){
     Array.from(navBarContainer.getElementsByClassName('navItem')).forEach(function(navItem){
       navItem.addEventListener('mouseenter', function(e){
@@ -9,14 +9,13 @@ window.onload = function(){
       });
       navItem.addEventListener('mousedown', function(e){
         handleClick(e.target);
-        console.log(e.target);
       });
       navItem.addEventListener('mouseup', function(e){
         handleHover(e.target)
       });
     });
   });
-};
+}
 
 function handleClick(target) {
   target.style.textShadow = "2px 2px grey";
